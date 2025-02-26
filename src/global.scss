@@ -1,0 +1,124 @@
+@use 'mixins';
+@use 'theme' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $background;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  font-family: inherit;
+  font-size: $paragraph;
+  font-weight: $normal;
+  color: $gray;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: $primary;
+}
+
+button {
+  background: $background;
+  border: 1px solid $primary;
+  font-family: inherit;
+  font-size: $paragraph;
+  font-weight: $medium;
+  color: $white;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: $primary;
+}
+
+img {
+  width: 100%;
+}
+
+.section {
+  @include mixins.flex-column($gap: $spacing-l);
+  @include mixins.dimensions($width: $desktop-width, $height: auto);
+  @include mixins.center($margin-top: $spacing-xl);
+
+  .section-heading-container {
+    @include mixins.flex-row($justify-content: flex-start, $gap: $spacing-m);
+    align-self: stretch;
+
+    .section-heading-container-text {
+      @include mixins.typography(
+        $font-size: 3.2rem,
+        $font-weight: medium,
+        $color: $white
+      );
+      transition: all 0.3s ease;
+      flex: 0 1 auto;
+    }
+
+    .section-heading-container-text::before {
+      content: '#';
+      margin-right: 1px;
+      @include mixins.typography(
+        $font-size: 3.2rem,
+        $font-weight: medium,
+        $color: $white
+      );
+    }
+
+    .section-heading-container-text:hover {
+      background-color: $primary;
+      flex: 1 1 auto;
+    }
+
+    .section-heading-container-horizontal-line {
+      @include mixins.dimensions(
+        $width: 50rem,
+        $height: 1px,
+        $background-color: $primary
+      );
+    }
+  }
+}
+
+.logo-wrapper {
+  @include mixins.flex-row($justify-content: flex-start, $gap: $spacing-m);
+  flex: 0 1 auto;
+  transition: all 0.3s ease;
+
+  .logo {
+    @include mixins.dimensions($width: 2rem, $height: 2rem);
+  }
+
+  .name {
+    @include mixins.typography($font-size: $paragraph, $font-weight: $bold);
+    transition: all 0.3s ease;
+    flex: 0;
+  }
+  .name:hover {
+    background-color: $primary;
+    flex: 1;
+  }
+}
+
+.logo-wrapper:hover {
+  background-color: $primary;
+  flex: 1 1 auto;
+}

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./global.css" rel="stylesheet" />
+    <link href="./theme.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- header section -->
+    <header>
+      <nav class="nav">
+        <div class="logo-wrapper">
+          <img alt="logo" src="./assets/logo.svg" class="logo" />
+          <span class="name">Abhijit</span>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="#" class="nav-list-item-link">home</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#projects" class="nav-list-item-link">works</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#about-me" class="nav-list-item-link">about-me</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#contacts" class="nav-list-item-link">contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- social-links section -->
+    <aside class="social-links">
+      <div class="social-links-vertical-line"></div>
+      <ul class="social-links-list">
+        <li class="social-links-list-item">
+          <a href="https://github.com/Abhijit105" class="social-links-list-item-link"
+            ><img
+              alt="github"
+              src="./assets/github-icon.svg"
+              class="social-links-list-icon"
+          /></a>
+        </li>
+        <li class="social-links-list-item">
+          <a href="https://www.linkedin.com/in/abhijit105/" class="social-links-list-item-link"
+            ><img
+              alt="linkedin"
+              src="./assets/linkedin-icon.svg"
+              class="social-links-list-icon"
+          /></a>
+        </li>
+        <li class="social-links-list-item">
+          <a href="mailto:abhijitkumar10.5@gmail.com" class="social-links-list-item-link">
+            <img
+              alt="email"
+              src="./assets/email-icon.svg"
+              class="social-links-list-icon"
+            />
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- hero section -->
+    <div class="hero">
+      <div class="hero-summary">
+        <div class="hero-summary-text-details">
+          <div class="hero-summary-text-details-headline">
+            Abhijit is a front-end developer specializing in
+            <span>ReactJS</span> and <span>React Native</span>
+          </div>
+          <div class="hero-summary-text-details-byline">
+            He builds scalable apps where technology meets user experience.
+          </div>
+        </div>
+        <button><a href="https://www.linkedin.com/in/abhijit105/" style="color: #fff;">Contact</a></button>
+      </div>
+      <div class="hero-img-box">
+        <img alt="hero-img-box-img" src="./assets/person-image.png" />
+        <div class="hero-img-box-text-container">
+          <div class="hero-img-box-text-container-square"></div>
+          <div class="hero-img-box-text-container-text">
+            Currently working in Appbrew
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- projects section -->
+    <div class="section projects">
+      <div class="section-heading-container">
+        <h2 class="section-heading-container-text">projects</h2>
+        <div class="section-heading-container-horizontal-line"></div>
+      </div>
+      <div class="projects-project-cards">
+        <div class="projects-project-card">
+          <div class="projects-project-card-img-box">
+            <img
+              alt="project"
+              src="./assets/wynk-music-clone.png"
+              class="projects-project-card-img-box-img"
+            />
+          </div>
+          <div class="projects-project-card-tech-stack">
+            <ul class="projects-project-card-tech-stack-list">
+              <li class="projects-project-card-tech-stack-list-item">React</li>
+              <li class="projects-project-card-tech-stack-list-item">
+                Material UI
+              </li>
+              <li class="projects-project-card-tech-stack-list-item">
+                Tanstack Query
+              </li>
+            </ul>
+          </div>
+          <div class="projects-project-card-details">
+            <h3 class="projects-project-card-project-name">Wynk Music Clone</h3>
+            <div class="projects-project-card-project-description">
+              A music app housing songs, albums and artists
+            </div>
+            <button><a href="https://wynk-music-clone-2.netlify.app/" style="color: #fff;">Live &lt;~&gt;</a></button>
+          </div>
+        </div>
+        <div class="projects-project-card">
+          <div class="projects-project-card-img-box">
+            <img
+              alt="project"
+              src="./assets/quora-clone.png"
+              class="projects-project-card-img-box-img"
+            />
+          </div>
+          <div class="projects-project-card-tech-stack">
+            <ul class="projects-project-card-tech-stack-list">
+              <li class="projects-project-card-tech-stack-list-item">React</li>
+              <li class="projects-project-card-tech-stack-list-item">
+                Material Tailwind
+              </li>
+              <li class="projects-project-card-tech-stack-list-item">
+                Tailwind CSS
+              </li>
+            </ul>
+          </div>
+          <div class="projects-project-card-details">
+            <h3 class="projects-project-card-project-name">Quora Clone</h3>
+            <div class="projects-project-card-project-description">
+              A replica of posts sharing platform, Quora
+            </div>
+            <button><a href="https://quora-clone-abhijit105.netlify.app/" style="color: #fff;">Live &lt;~&gt;</a></button>
+          </div>
+        </div>
+        <div class="projects-project-card">
+          <div class="projects-project-card-img-box">
+            <img
+              alt="project"
+              src="./assets/todo-list.png"
+              class="projects-project-card-img-box-img"
+            />
+          </div>
+          <div class="projects-project-card-tech-stack">
+            <ul class="projects-project-card-tech-stack-list">
+              <li class="projects-project-card-tech-stack-list-item">React</li>
+              <li class="projects-project-card-tech-stack-list-item">
+                Appwrite
+              </li>
+              <li class="projects-project-card-tech-stack-list-item">
+                Zustand
+              </li>
+            </ul>
+          </div>
+          <div class="projects-project-card-details">
+            <h3 class="projects-project-card-project-name">Todo-List</h3>
+            <div class="projects-project-card-project-description">
+              A simple yet powerful todo-list app
+            </div>
+            <button><a href="https://todo-list-dqwf.onrender.com/" style="color: #fff;">Live &lt;~&gt;</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- skills section -->
+    <div class="section skills">
+      <div class="section-heading-container">
+        <h2 class="section-heading-container-text">skills</h2>
+        <div class="section-heading-container-horizontal-line"></div>
+      </div>
+      <div class="skills-content">
+        <div class="skills-content-img-container">
+          <img
+            alt="skills img"
+            src="./assets/skills.svg"
+            class="skills-content-img-container-img"
+          />
+        </div>
+        <div class="skills-content-skill-cards">
+          <div class="skills-content-skill-card">
+            <div class="skills-content-skill-card-heading-container">
+              <h4 class="skills-content-skill-card-heading-container-text">
+                Languages
+              </h4>
+            </div>
+            <div class="skills-content-skill-card-details">
+              <ul class="skills-content-skill-card-details-list">
+                <li class="skills-content-skill-card-details-list-item">
+                  Java
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  Javascript
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  Typescript
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="skills-content-skill-card">
+            <div class="skills-content-skill-card-heading-container">
+              <h4 class="skills-content-skill-card-heading-container-text">
+                Technologies
+              </h4>
+            </div>
+            <div class="skills-content-skill-card-details">
+              <ul class="skills-content-skill-card-details-list">
+                <li class="skills-content-skill-card-details-list-item">
+                  Material UI
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  Tailwind CSS
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  Tanstack Query
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  Redux Toolkit
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  Zustand
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  Appwrite
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="skills-content-skill-card">
+            <div class="skills-content-skill-card-heading-container">
+              <h4 class="skills-content-skill-card-heading-container-text">
+                Other
+              </h4>
+            </div>
+            <div class="skills-content-skill-card-details">
+              <ul class="skills-content-skill-card-details-list">
+                <li class="skills-content-skill-card-details-list-item">
+                  HTML
+                </li>
+                <li class="skills-content-skill-card-details-list-item">CSS</li>
+                <li class="skills-content-skill-card-details-list-item">
+                  SCSS
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  REST
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  GraphQL
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="skills-content-skill-card">
+            <div class="skills-content-skill-card-heading-container">
+              <h4 class="skills-content-skill-card-heading-container-text">
+                Tools
+              </h4>
+            </div>
+            <div class="skills-content-skill-card-details">
+              <ul class="skills-content-skill-card-details-list">
+                <li class="skills-content-skill-card-details-list-item">
+                  VS Code
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  Git & GitHub
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  Slack
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  Notion
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  Linear
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="skills-content-skill-card">
+            <div class="skills-content-skill-card-heading-container">
+              <h4 class="skills-content-skill-card-heading-container-text">
+                Frameworks
+              </h4>
+            </div>
+            <div class="skills-content-skill-card-details">
+              <ul class="skills-content-skill-card-details-list">
+                <li class="skills-content-skill-card-details-list-item">
+                  React
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  React Native
+                </li>
+                <li class="skills-content-skill-card-details-list-item">
+                  Express
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about-me section -->
+    <div class="section about-me">
+      <div class="section-heading-container">
+        <h2 class="section-heading-container-text">about-me</h2>
+        <div class="section-heading-container-horizontal-line"></div>
+      </div>
+      <div class="about-me-content">
+        <div class="about-me-content-text-details"> 
+          <div class="about-me-content-text-details-description">
+            Hello I'm Abhijit.<br /><br />I'm a front-end developer based in
+            Bangalore, India, specializing in mobile app development for Shopify
+            brands. I enjoy crafting intuitive, high-performance apps that
+            enhance user experience.<br></br>Over the past year, I’ve gained hands-on experience in building scalable and engaging solutions tailored to e-commerce needs. With a strong focus on React Native and no-code platforms, I enjoy crafting intuitive, high-performance apps that help brands scale their businesses. I’m always keen to explore new tools and technologies, keeping up with the latest trends in development.
+          </div>
+          <button><a href="https://www.linkedin.com/in/abhijit105/" style="color: #fff;">Read more &rarr;</a></button>
+        </div>
+        <div class="about-me-content-img-box">
+          <img
+            alt="about-me-img"
+            src="./assets/about-image.png"
+            class="about-me-content-img-box-img"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- contacts section -->
+     <div class="section contacts">
+      <div class="section-heading-container">
+        <div class="section-heading-container-text">contacts</div>
+        <div class="section-heading-container-horizontal-line"></div>
+      </div>
+      <div class="contacts-details">
+        <div class="contacts-details-text-container">
+          <div class="contacts-details-text-container-description">
+            I'm interested in full time oppurtunities. However, if you have any other request or question, don't hesitate to contact me.
+          </div>
+        </div>
+        <div class="contacts-details-contacts-box">
+          <p class="contacts-details-contacts-box-text">Message me here</p>
+          <ul class="contacts-details-contacts-box-contacts-list">
+            <li class="contacts-details-contacts-box-contacts-list-item"><img alt="gmail" src="./assets/email-icon.svg" class="contacts-details-contacts-box-contacts-list-item-icon" /><a href="mailto:abhijitkumar10.5@gmail.com" class="contacts-details-contacts-box-contacts-list-item-link">GMail@abhijitkumar10.5</a></li>
+            <li class="contacts-details-contacts-box-contacts-list-item"><img alt="linkedin" src="./assets/linkedin-icon.svg" class="contacts-details-contacts-box-contacts-list-item-icon" /><a href="https://www.linkedin.com/in/abhijit105/" class="contacts-details-contacts-box-contacts-list-item-link">LinkedIn@abhijit105</a></li>
+          </ul>
+        </div>
+      </div>
+     </div>
+
+     <!-- horizontal-rule -->
+      <hr class="horizontal-rule">
+
+      <!-- footer -->
+       <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-top-sign-off">
+            <div class="footer-top-sign-off-name">
+              <div class="logo-wrapper">
+                <img alt="logo" src="./assets/logo.svg" class="logo" />
+                <span class="name">Abhijit</span>
+              </div>
+              <div class="footer-top-sign-off-name-profile">abhijit105@LinkedIn</div>
+            </div>
+            <div class="footer-top-sign-off-designation">
+              Frontend and Mobile App Developer
+            </div>
+          </div>
+          <div class="footer-top-media">
+            <h4 class="footer-top-media-heading">Media</h4>
+            <div class="footer-top-media-icons-container">
+              <a href="https://github.com/Abhijit105"><img alt="github-icon" src="./assets/github-icon.svg" class="footer-top-media-icons-container-icon" /></a>
+              <a href="https://www.linkedin.com/in/abhijit105/"><img alt="linkedin" src="./assets/linkedin-icon.svg" class="footer-top-media-icons-container-icon" /></a>
+              <a href="mailto:abhijitkumar10.5@gmail.com"><img alt="email-icon" src="./assets/email-icon.svg" class="footer-top-media-icons-container-icon" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-bottom-copyright">&copy; 2025. Made by Abhijit</p>
+        </div>
+       </footer>
+  </body>
+</html>

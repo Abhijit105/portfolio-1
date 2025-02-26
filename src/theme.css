@@ -1,0 +1,22 @@
+:export {
+  background: #282c33;
+  primary: #c778dd;
+  gray: #abb2bf;
+  white: #ffffff;
+  desktop-width: 120rem;
+  small: 1rem;
+  paragraph: 1.6rem;
+  label: 2.4rem;
+  display: 3.2rem;
+  normal: 400;
+  medium: 500;
+  bold: 700;
+  semi-bold: 600;
+  spacing-xl: 16rem;
+  spacing-l: 4rem;
+  spacing-m: 2rem;
+  spacing-s: 1rem;
+  spacing-xs: 0.5rem;
+}
+
+/*# sourceMappingURL=theme.css.map */

@@ -1,0 +1,428 @@
+@use 'mixins';
+@use 'theme' as *;
+
+// header
+.nav {
+  @include mixins.flex-row($gap: $spacing-l);
+  @include mixins.dimensions($width: $desktop-width, $height: auto);
+  @include mixins.center;
+
+  .nav-list {
+    @include mixins.flex-row($gap: $spacing-m);
+
+    .nav-list-item-link::before {
+      content: '#';
+      @include mixins.typography(
+        $font-size: $paragraph,
+        $font-weight: $normal,
+        $color: $primary
+      );
+      margin-right: 1px;
+    }
+  }
+}
+
+// social-links
+.social-links {
+  @include mixins.flex-column;
+  @include mixins.dimensions($width: 3.2rem, $height: auto);
+  @include mixins.position-absolute;
+  .social-links-vertical-line {
+    @include mixins.dimensions(
+      $width: 1px,
+      $height: 19.2rem,
+      $background-color: $gray
+    );
+    @include mixins.center;
+  }
+
+  .social-links-list {
+    @include mixins.flex-column;
+  }
+
+  .social-links-list-icon {
+    @include mixins.dimensions($width: 3.2rem, $height: 3.2rem);
+    transition: filter 0.3s ease;
+  }
+
+  .social-links-list-icon:hover {
+    stroke: $primary;
+    filter: brightness(10);
+  }
+}
+
+// hero-section
+.hero {
+  @include mixins.dimensions($width: $desktop-width, $height: auto);
+  @include mixins.center($margin-top: $spacing-xl);
+  @include mixins.flex-row($gap: $spacing-l);
+
+  .hero-summary {
+    @include mixins.flex-column($gap: $spacing-m);
+    flex: 1;
+
+    .hero-summary-text-details {
+      @include mixins.flex-column($gap: $spacing-s);
+
+      .hero-summary-text-details-headline {
+        @include mixins.typography(
+          $font-size: $display,
+          $font-weight: $semi-bold,
+          $color: $white
+        );
+
+        span {
+          color: $primary;
+        }
+      }
+
+      .hero-summary-text-details-byline {
+        @include mixins.typography(
+          $font-size: $paragraph,
+          $font-weight: $normal,
+          $color: $gray
+        );
+      }
+    }
+  }
+
+  .hero-img-box {
+    @include mixins.flex-column($align-items: center, $gap: $spacing-m);
+
+    .hero-img-box-img {
+      align-self: stretch;
+    }
+
+    .hero-img-box-text-container {
+      @include mixins.flex-row($justify-content: center, $gap: $spacing-s);
+      align-self: stretch;
+
+      .hero-img-box-text-container-square {
+        @include mixins.dimensions($width: 1.6rem, $height: 1.6rem);
+        background-color: $white;
+      }
+
+      .hero-img-box-text-container-text {
+        @include mixins.typography(
+          $font-size: $paragraph,
+          $font-weight: $medium,
+          $color: $white
+        );
+      }
+    }
+  }
+}
+
+// projects section
+.projects {
+  .projects-project-cards {
+    align-self: stretch;
+    @include mixins.flex-row($gap: $spacing-l);
+
+    .projects-project-card {
+      align-self: stretch;
+      @include mixins.flex-column($gap: $spacing-m);
+      border: 1px solid gray;
+
+      .projects-project-card-img-box {
+        align-self: stretch;
+      }
+
+      .projects-project-card-tech-stack {
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        align-self: stretch;
+        padding: 0.8rem;
+
+        .projects-project-card-tech-stack-list {
+          @include mixins.flex-row(
+            $justify-content: flex-start,
+            $gap: $spacing-s,
+            $flex-wrap: wrap
+          );
+
+          .projects-project-card-tech-stack-list-item {
+            @include mixins.typography(
+              $font-size: $paragraph,
+              $font-weight: $normal,
+              $color: $gray
+            );
+          }
+        }
+      }
+
+      .projects-project-card-details {
+        align-self: stretch;
+        padding: 1.6rem;
+        flex: 1;
+        @include mixins.flex-column;
+
+        .projects-project-card-project-name {
+          @include mixins.typography(
+            $font-size: 2.4rem,
+            $font-weight: $medium,
+            $color: $white
+          );
+        }
+
+        .projects-project-card-project-description {
+          @include mixins.typography(
+            $font-size: 1.6rem,
+            $font-weight: $normal,
+            $color: $gray
+          );
+          flex: 1;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// skills section
+.skills {
+  .skills-content {
+    @include mixins.flex-row($align-items: flex-start, $gap: $spacing-l);
+    align-self: stretch;
+
+    .skills-content-img-container {
+      @include mixins.flex-column;
+      flex: 0 1 34%;
+
+      .skills-content-img-container-img {
+        align-self: stretch;
+      }
+    }
+
+    .skills-content-skill-cards {
+      @include mixins.flex-row(
+        $align-items: flex-start,
+        $justify-content: flex-end,
+        $gap: $spacing-m,
+        $flex-wrap: wrap
+      );
+      flex: 1;
+      align-content: flex-start;
+
+      .skills-content-skill-card {
+        @include mixins.flex-column($justify-content: flex-start);
+        flex: 0 1 30%;
+        border: 1px solid $gray;
+
+        .skills-content-skill-card-heading-container {
+          padding: 0.8rem;
+          border-bottom: 1px solid $gray;
+          align-self: stretch;
+
+          .skills-content-skill-card-heading-container-text {
+            @include mixins.typography(
+              $font-size: 1.6rem,
+              $font-weight: $semi-bold,
+              $color: $white
+            );
+          }
+        }
+
+        .skills-content-skill-card-details {
+          padding: 0.8rem;
+
+          .skills-content-skill-card-details-list {
+            @include mixins.flex-row(
+              $justify-content: flex-start,
+              $gap: $spacing-s,
+              $flex-wrap: wrap
+            );
+
+            .skills-content-skill-card-details-list-item {
+              @include mixins.typography(
+                $font-size: 1.6rem,
+                $font-weight: $normal,
+                $color: $gray
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// about-me section
+.about-me {
+  .about-me-content {
+    @include mixins.flex-row($align-items: center, $gap: $spacing-l);
+    align-self: stretch;
+
+    .about-me-content-text-details {
+      @include mixins.flex-column($gap: $spacing-m);
+      flex: 1;
+
+      .about-me-content-text-details-description {
+        align-self: stretch;
+        @include mixins.typography(
+          $font-size: 1.6rem,
+          $font-weight: $normal,
+          $color: $gray
+        );
+      }
+    }
+
+    .about-me-content-img-box {
+      .about-me-content-img-box-img {
+        align-self: stretch;
+        animation-name: animate;
+        animation-timing-function: ease;
+        animation-duration: 0.9s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes animate {
+        0% {
+          transform: translateY(-2rem);
+        }
+        100% {
+          transform: translateY(2rem);
+        }
+      }
+    }
+  }
+}
+
+// contacts section
+.contacts {
+  .contacts-details {
+    @include mixins.flex-row($gap: $spacing-l);
+
+    .contacts-details-text-container {
+      flex: 1;
+      @include mixins.flex-column($align-items: stretch);
+
+      .contacts-details-text-container-description {
+        @include mixins.typography(
+          $font-size: $paragraph,
+          $font-weight: $medium,
+          $color: $gray
+        );
+      }
+    }
+
+    .contacts-details-contacts-box {
+      @include mixins.flex-column(
+        $align-items: center,
+        $justify-content: center,
+        $gap: $spacing-m
+      );
+      border: 1px solid white;
+      padding: 2rem;
+    }
+
+    .contacts-details-contacts-box-text {
+      @include mixins.typography(
+        $font-size: $paragraph,
+        $font-weight: $semi-bold,
+        $color: $white
+      );
+    }
+
+    .contacts-details-contacts-box-contacts-list {
+      @include mixins.flex-column(
+        $align-items: stretch,
+        $justify-content: center,
+        $gap: $spacing-m
+      );
+
+      .contacts-details-contacts-box-contacts-list-item {
+        @include mixins.flex-row(
+          $justify-content: flex-start,
+          $gap: $spacing-s
+        );
+
+        .contacts-details-contacts-box-contacts-list-item-icon {
+          @include mixins.dimensions($width: 3.2rem, $height: 3.2rem);
+        }
+      }
+    }
+  }
+}
+
+// horizontal rule
+.horizontal-rule {
+  @include mixins.dimensions(
+    $width: '100%',
+    $height: '4px',
+    $background-color: $white
+  );
+  margin-top: $spacing-xl;
+}
+
+// footer
+.footer {
+  @include mixins.flex-column($align-items: stretch, $gap: $spacing-l);
+  @include mixins.dimensions($width: $desktop-width, $height: auto);
+  @include mixins.center($margin-top: $spacing-l, $margin-bottom: $spacing-l);
+
+  .footer-top {
+    @include mixins.flex-row($gap: $spacing-m);
+
+    .footer-top-sign-off {
+      @include mixins.flex-column($align-items: stretch, $gap: $spacing-s);
+      flex: 1;
+
+      .footer-top-sign-off-name {
+        @include mixins.flex-row(
+          $justify-content: flex-start,
+          $gap: $spacing-xs
+        );
+
+        .footer-top-sign-off-name-profile {
+          @include mixins.typography(
+            $font-size: $paragraph,
+            $font-weight: $normal,
+            $color: $gray
+          );
+        }
+      }
+
+      .footer-top-sign-off-designation {
+        @include mixins.typography(
+          $font-size: $paragraph,
+          $font-weight: $normal,
+          $color: $white
+        );
+      }
+    }
+
+    .footer-top-media {
+      @include mixins.flex-column($gap: $spacing-s);
+
+      .footer-top-media-heading {
+        @include mixins.typography(
+          $font-size: $label,
+          $font-weight: $medium,
+          $color: $white
+        );
+      }
+
+      .footer-top-media-icons-container {
+        @include mixins.flex-row($justify-content: center, $gap: $spacing-xs);
+
+        .footer-top-media-icons-container-icon {
+          @include mixins.dimensions($width: 3.2rem, $height: 3.2rem);
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    @include mixins.flex-column($align-items: center);
+
+    .footer-bottom-copyright {
+      @include mixins.typography(
+        $font-size: $paragraph,
+        $font-weight: $normal,
+        $color: $gray
+      );
+    }
+  }
+}

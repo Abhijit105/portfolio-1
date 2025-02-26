@@ -1,0 +1,46 @@
+// colors
+$background: #282c33;
+$primary: #c778dd;
+$gray: #abb2bf;
+$white: #ffffff;
+
+// sizes
+$desktop-width: 120rem;
+
+// typography
+$small: 1rem;
+$paragraph: 1.6rem;
+$label: 2.4rem;
+$display: 3.2rem;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+// spacing
+$spacing-xl: 16rem;
+$spacing-l: 4rem;
+$spacing-m: 2rem;
+$spacing-s: 1rem;
+$spacing-xs: 0.5rem;
+
+:export {
+  background: $background;
+  primary: $primary;
+  gray: $gray;
+  white: $white;
+  desktop-width: $desktop-width;
+  small: $small;
+  paragraph: $paragraph;
+  label: $label;
+  display: $display;
+  normal: $normal;
+  medium: $medium;
+  bold: $bold;
+  semi-bold: $semi-bold;
+  spacing-xl: $spacing-xl;
+  spacing-l: $spacing-l;
+  spacing-m: $spacing-m;
+  spacing-s: $spacing-s;
+  spacing-xs: $spacing-xs;
+}
