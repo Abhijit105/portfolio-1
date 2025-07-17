@@ -28,6 +28,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -91,7 +92,7 @@ img {
   flex-wrap: no-wrap;
   align-self: stretch;
 }
-.section .section-heading-container .section-heading-container-text {
+.section .section-heading-container .section-heading {
   font-family: "Poppins", sans-serif;
   font-size: 3.2rem;
   line-height: 1.5;
@@ -100,7 +101,7 @@ img {
   transition: all 0.3s ease;
   flex: 0 1 auto;
 }
-.section .section-heading-container .section-heading-container-text::before {
+.section .section-heading-container .section-heading::before {
   content: "#";
   margin-right: 1px;
   font-family: "Poppins", sans-serif;
@@ -109,11 +110,11 @@ img {
   font-weight: medium;
   color: #ffffff;
 }
-.section .section-heading-container .section-heading-container-text:hover {
+.section .section-heading-container .section-heading:hover {
   background-color: #c778dd;
   flex: 1 1 auto;
 }
-.section .section-heading-container .section-heading-container-horizontal-line {
+.section .section-heading-container .horizontal-line {
   width: 50rem;
   height: 1px;
   background-color: #c778dd;

@@ -10,6 +10,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -63,7 +64,7 @@ img {
     @include mixins.flex-row($justify-content: flex-start, $gap: $spacing-m);
     align-self: stretch;
 
-    .section-heading-container-text {
+    .section-heading {
       @include mixins.typography(
         $font-size: 3.2rem,
         $font-weight: medium,
@@ -73,7 +74,7 @@ img {
       flex: 0 1 auto;
     }
 
-    .section-heading-container-text::before {
+    .section-heading::before {
       content: '#';
       margin-right: 1px;
       @include mixins.typography(
@@ -83,12 +84,12 @@ img {
       );
     }
 
-    .section-heading-container-text:hover {
+    .section-heading:hover {
       background-color: $primary;
       flex: 1 1 auto;
     }
 
-    .section-heading-container-horizontal-line {
+    .horizontal-line {
       @include mixins.dimensions(
         $width: 50rem,
         $height: 1px,

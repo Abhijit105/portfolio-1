@@ -36,7 +36,7 @@
   gap: 2rem;
   flex-wrap: no-wrap;
 }
-.nav .nav-list .nav-list-item-link::before {
+.nav .nav-list .nav-link::before {
   content: "#";
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
@@ -59,7 +59,7 @@
   top: 0;
   left: 0;
 }
-.social-links .social-links-vertical-line {
+.social-links .vertical-line {
   width: 1px;
   height: 19.2rem;
   background-color: #abb2bf;
@@ -73,12 +73,12 @@
   gap: 0;
   flex-wrap: wrap;
 }
-.social-links .social-links-list-icon {
+.social-links .social-links-icon {
   width: 3.2rem;
   height: 3.2rem;
   transition: filter 0.3s ease;
 }
-.social-links .social-links-list-icon:hover {
+.social-links .social-links-icon:hover {
   stroke: #c778dd;
   filter: brightness(10);
 }
@@ -110,17 +110,17 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
-.hero .hero-summary .hero-summary-text-details .hero-summary-text-details-headline {
+.hero .hero-summary .hero-summary-text-details .hero-summary-headline {
   font-family: "Poppins", sans-serif;
   font-size: 3.2rem;
   line-height: 1.5;
   font-weight: 600;
   color: #ffffff;
 }
-.hero .hero-summary .hero-summary-text-details .hero-summary-text-details-headline span {
+.hero .hero-summary .hero-summary-text-details .hero-summary-headline span {
   color: #c778dd;
 }
-.hero .hero-summary .hero-summary-text-details .hero-summary-text-details-byline {
+.hero .hero-summary .hero-summary-text-details .hero-summary-byline {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -135,10 +135,10 @@
   gap: 2rem;
   flex-wrap: wrap;
 }
-.hero .hero-img-box .hero-img-box-img {
+.hero .hero-img-box .hero-img {
   align-self: stretch;
 }
-.hero .hero-img-box .hero-img-box-text-container {
+.hero .hero-img-box .hero-text-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,12 +146,12 @@
   flex-wrap: no-wrap;
   align-self: stretch;
 }
-.hero .hero-img-box .hero-img-box-text-container .hero-img-box-text-container-square {
+.hero .hero-img-box .hero-text-container .square {
   width: 1.6rem;
   height: 1.6rem;
   background-color: #ffffff;
 }
-.hero .hero-img-box .hero-img-box-text-container .hero-img-box-text-container-text {
+.hero .hero-img-box .hero-text-container .hero-text {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -159,7 +159,7 @@
   color: #ffffff;
 }
 
-.projects .projects-project-cards {
+.projects .project-cards {
   align-self: stretch;
   display: flex;
   align-items: center;
@@ -167,7 +167,7 @@
   gap: 4rem;
   flex-wrap: no-wrap;
 }
-.projects .projects-project-cards .projects-project-card {
+.projects .project-cards .project-card {
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -177,30 +177,30 @@
   flex-wrap: wrap;
   border: 1px solid gray;
 }
-.projects .projects-project-cards .projects-project-card .projects-project-card-img-box {
+.projects .project-cards .project-card .project-img-box {
   align-self: stretch;
 }
-.projects .projects-project-cards .projects-project-card .projects-project-card-tech-stack {
+.projects .project-cards .project-card .tech-stack {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   align-self: stretch;
   padding: 0.8rem;
 }
-.projects .projects-project-cards .projects-project-card .projects-project-card-tech-stack .projects-project-card-tech-stack-list {
+.projects .project-cards .project-card .tech-stack .tech-stack-list {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
   flex-wrap: wrap;
 }
-.projects .projects-project-cards .projects-project-card .projects-project-card-tech-stack .projects-project-card-tech-stack-list .projects-project-card-tech-stack-list-item {
+.projects .project-cards .project-card .tech-stack .tech-stack-list .tech-stack-item {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 400;
   color: #abb2bf;
 }
-.projects .projects-project-cards .projects-project-card .projects-project-card-details {
+.projects .project-cards .project-card .details {
   align-self: stretch;
   padding: 1.6rem;
   flex: 1;
@@ -211,14 +211,14 @@
   gap: 0;
   flex-wrap: wrap;
 }
-.projects .projects-project-cards .projects-project-card .projects-project-card-details .projects-project-card-project-name {
+.projects .project-cards .project-card .details .project-name {
   font-family: "Poppins", sans-serif;
   font-size: 2.4rem;
   line-height: 1.5;
   font-weight: 500;
   color: #ffffff;
 }
-.projects .projects-project-cards .projects-project-card .projects-project-card-details .projects-project-card-project-description {
+.projects .project-cards .project-card .details .project-description {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -236,7 +236,7 @@
   flex-wrap: no-wrap;
   align-self: stretch;
 }
-.skills .skills-content .skills-content-img-container {
+.skills .skills-content .skills-img-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -245,10 +245,10 @@
   flex-wrap: wrap;
   flex: 0 1 34%;
 }
-.skills .skills-content .skills-content-img-container .skills-content-img-container-img {
+.skills .skills-content .skills-img-container .skills-img {
   align-self: stretch;
 }
-.skills .skills-content .skills-content-skill-cards {
+.skills .skills-content .skill-cards {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
@@ -257,7 +257,7 @@
   flex: 1;
   align-content: flex-start;
 }
-.skills .skills-content .skills-content-skill-cards .skills-content-skill-card {
+.skills .skills-content .skill-cards .skill-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -267,29 +267,29 @@
   flex: 0 1 30%;
   border: 1px solid #abb2bf;
 }
-.skills .skills-content .skills-content-skill-cards .skills-content-skill-card .skills-content-skill-card-heading-container {
+.skills .skills-content .skill-cards .skill-card .skill-card-heading-container {
   padding: 0.8rem;
   border-bottom: 1px solid #abb2bf;
   align-self: stretch;
 }
-.skills .skills-content .skills-content-skill-cards .skills-content-skill-card .skills-content-skill-card-heading-container .skills-content-skill-card-heading-container-text {
+.skills .skills-content .skill-cards .skill-card .skill-card-heading-container .skill-card-heading {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 600;
   color: #ffffff;
 }
-.skills .skills-content .skills-content-skill-cards .skills-content-skill-card .skills-content-skill-card-details {
+.skills .skills-content .skill-cards .skill-card .skill-card-details {
   padding: 0.8rem;
 }
-.skills .skills-content .skills-content-skill-cards .skills-content-skill-card .skills-content-skill-card-details .skills-content-skill-card-details-list {
+.skills .skills-content .skill-cards .skill-card .skill-card-details .skill-card-list {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
   flex-wrap: wrap;
 }
-.skills .skills-content .skills-content-skill-cards .skills-content-skill-card .skills-content-skill-card-details .skills-content-skill-card-details-list .skills-content-skill-card-details-list-item {
+.skills .skills-content .skill-cards .skill-card .skill-card-details .skill-card-list .skill-card-item {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -305,7 +305,7 @@
   flex-wrap: no-wrap;
   align-self: stretch;
 }
-.about-me .about-me-content .about-me-content-text-details {
+.about-me .about-me-content .about-me-text-details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -314,7 +314,7 @@
   flex-wrap: wrap;
   flex: 1;
 }
-.about-me .about-me-content .about-me-content-text-details .about-me-content-text-details-description {
+.about-me .about-me-content .about-me-text-details .about-me-description {
   align-self: stretch;
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
@@ -322,7 +322,7 @@
   font-weight: 400;
   color: #abb2bf;
 }
-.about-me .about-me-content .about-me-content-img-box .about-me-content-img-box-img {
+.about-me .about-me-content .about-me-img-box .about-me-img {
   align-self: stretch;
   animation-name: animate;
   animation-timing-function: ease;
@@ -339,14 +339,14 @@
   }
 }
 
-.contacts .contacts-details {
+.contacts .contact-details {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
   flex-wrap: no-wrap;
 }
-.contacts .contacts-details .contacts-details-text-container {
+.contacts .contact-details .contact-details-text-container {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -355,14 +355,14 @@
   gap: 0;
   flex-wrap: wrap;
 }
-.contacts .contacts-details .contacts-details-text-container .contacts-details-text-container-description {
+.contacts .contact-details .contact-details-text-container .contact-details-description {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 500;
   color: #abb2bf;
 }
-.contacts .contacts-details .contacts-details-contacts-box {
+.contacts .contact-details .contact-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -372,14 +372,14 @@
   border: 1px solid white;
   padding: 2rem;
 }
-.contacts .contacts-details .contacts-details-contacts-box-text {
+.contacts .contact-details .contact-text {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 600;
   color: #ffffff;
 }
-.contacts .contacts-details .contacts-details-contacts-box-contacts-list {
+.contacts .contact-details .contact-list {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -387,14 +387,14 @@
   gap: 2rem;
   flex-wrap: wrap;
 }
-.contacts .contacts-details .contacts-details-contacts-box-contacts-list .contacts-details-contacts-box-contacts-list-item {
+.contacts .contact-details .contact-list .contact-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
   flex-wrap: no-wrap;
 }
-.contacts .contacts-details .contacts-details-contacts-box-contacts-list .contacts-details-contacts-box-contacts-list-item .contacts-details-contacts-box-contacts-list-item-icon {
+.contacts .contact-details .contact-list .contact-item .contact-icon {
   width: 3.2rem;
   height: 3.2rem;
 }
@@ -424,7 +424,7 @@
   gap: 2rem;
   flex-wrap: no-wrap;
 }
-.footer .footer-top .footer-top-sign-off {
+.footer .footer-top .sign-off {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -433,28 +433,28 @@
   flex-wrap: wrap;
   flex: 1;
 }
-.footer .footer-top .footer-top-sign-off .footer-top-sign-off-name {
+.footer .footer-top .sign-off .sign-off-name {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
   flex-wrap: no-wrap;
 }
-.footer .footer-top .footer-top-sign-off .footer-top-sign-off-name .footer-top-sign-off-name-profile {
+.footer .footer-top .sign-off .sign-off-name .sign-off-name-profile {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 400;
   color: #abb2bf;
 }
-.footer .footer-top .footer-top-sign-off .footer-top-sign-off-designation {
+.footer .footer-top .sign-off .sign-off-designation {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 400;
   color: #ffffff;
 }
-.footer .footer-top .footer-top-media {
+.footer .footer-top .media {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -462,21 +462,21 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
-.footer .footer-top .footer-top-media .footer-top-media-heading {
+.footer .footer-top .media .media-heading {
   font-family: "Poppins", sans-serif;
   font-size: 2.4rem;
   line-height: 1.5;
   font-weight: 500;
   color: #ffffff;
 }
-.footer .footer-top .footer-top-media .footer-top-media-icons-container {
+.footer .footer-top .media .media-icons-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   flex-wrap: no-wrap;
 }
-.footer .footer-top .footer-top-media .footer-top-media-icons-container .footer-top-media-icons-container-icon {
+.footer .footer-top .media .media-icons-container .media-icon {
   width: 3.2rem;
   height: 3.2rem;
 }
@@ -488,7 +488,7 @@
   gap: 0;
   flex-wrap: wrap;
 }
-.footer .footer-bottom .footer-bottom-copyright {
+.footer .footer-bottom .copyright {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;

@@ -10,7 +10,7 @@
   .nav-list {
     @include mixins.flex-row($gap: $spacing-m);
 
-    .nav-list-item-link::before {
+    .nav-link::before {
       content: '#';
       @include mixins.typography(
         $font-size: $paragraph,
@@ -27,7 +27,7 @@
   @include mixins.flex-column;
   @include mixins.dimensions($width: 3.2rem, $height: auto);
   @include mixins.position-absolute;
-  .social-links-vertical-line {
+  .vertical-line {
     @include mixins.dimensions(
       $width: 1px,
       $height: 19.2rem,
@@ -40,12 +40,12 @@
     @include mixins.flex-column;
   }
 
-  .social-links-list-icon {
+  .social-links-icon {
     @include mixins.dimensions($width: 3.2rem, $height: 3.2rem);
     transition: filter 0.3s ease;
   }
 
-  .social-links-list-icon:hover {
+  .social-links-icon:hover {
     stroke: $primary;
     filter: brightness(10);
   }
@@ -64,7 +64,7 @@
     .hero-summary-text-details {
       @include mixins.flex-column($gap: $spacing-s);
 
-      .hero-summary-text-details-headline {
+      .hero-summary-headline {
         @include mixins.typography(
           $font-size: $display,
           $font-weight: $semi-bold,
@@ -76,7 +76,7 @@
         }
       }
 
-      .hero-summary-text-details-byline {
+      .hero-summary-byline {
         @include mixins.typography(
           $font-size: $paragraph,
           $font-weight: $normal,
@@ -89,20 +89,20 @@
   .hero-img-box {
     @include mixins.flex-column($align-items: center, $gap: $spacing-m);
 
-    .hero-img-box-img {
+    .hero-img {
       align-self: stretch;
     }
 
-    .hero-img-box-text-container {
+    .hero-text-container {
       @include mixins.flex-row($justify-content: center, $gap: $spacing-s);
       align-self: stretch;
 
-      .hero-img-box-text-container-square {
+      .square {
         @include mixins.dimensions($width: 1.6rem, $height: 1.6rem);
         background-color: $white;
       }
 
-      .hero-img-box-text-container-text {
+      .hero-text {
         @include mixins.typography(
           $font-size: $paragraph,
           $font-weight: $medium,
@@ -115,33 +115,33 @@
 
 // projects section
 .projects {
-  .projects-project-cards {
+  .project-cards {
     align-self: stretch;
     @include mixins.flex-row($gap: $spacing-l);
 
-    .projects-project-card {
+    .project-card {
       align-self: stretch;
       @include mixins.flex-column($gap: $spacing-m);
       border: 1px solid gray;
 
-      .projects-project-card-img-box {
+      .project-img-box {
         align-self: stretch;
       }
 
-      .projects-project-card-tech-stack {
+      .tech-stack {
         border-top: 1px solid gray;
         border-bottom: 1px solid gray;
         align-self: stretch;
         padding: 0.8rem;
 
-        .projects-project-card-tech-stack-list {
+        .tech-stack-list {
           @include mixins.flex-row(
             $justify-content: flex-start,
             $gap: $spacing-s,
             $flex-wrap: wrap
           );
 
-          .projects-project-card-tech-stack-list-item {
+          .tech-stack-item {
             @include mixins.typography(
               $font-size: $paragraph,
               $font-weight: $normal,
@@ -151,13 +151,13 @@
         }
       }
 
-      .projects-project-card-details {
+      .details {
         align-self: stretch;
         padding: 1.6rem;
         flex: 1;
         @include mixins.flex-column;
 
-        .projects-project-card-project-name {
+        .project-name {
           @include mixins.typography(
             $font-size: 2.4rem,
             $font-weight: $medium,
@@ -165,7 +165,7 @@
           );
         }
 
-        .projects-project-card-project-description {
+        .project-description {
           @include mixins.typography(
             $font-size: 1.6rem,
             $font-weight: $normal,
@@ -185,16 +185,16 @@
     @include mixins.flex-row($align-items: flex-start, $gap: $spacing-l);
     align-self: stretch;
 
-    .skills-content-img-container {
+    .skills-img-container {
       @include mixins.flex-column;
       flex: 0 1 34%;
 
-      .skills-content-img-container-img {
+      .skills-img {
         align-self: stretch;
       }
     }
 
-    .skills-content-skill-cards {
+    .skill-cards {
       @include mixins.flex-row(
         $align-items: flex-start,
         $justify-content: flex-end,
@@ -204,17 +204,17 @@
       flex: 1;
       align-content: flex-start;
 
-      .skills-content-skill-card {
+      .skill-card {
         @include mixins.flex-column($justify-content: flex-start);
         flex: 0 1 30%;
         border: 1px solid $gray;
 
-        .skills-content-skill-card-heading-container {
+        .skill-card-heading-container {
           padding: 0.8rem;
           border-bottom: 1px solid $gray;
           align-self: stretch;
 
-          .skills-content-skill-card-heading-container-text {
+          .skill-card-heading {
             @include mixins.typography(
               $font-size: 1.6rem,
               $font-weight: $semi-bold,
@@ -223,17 +223,17 @@
           }
         }
 
-        .skills-content-skill-card-details {
+        .skill-card-details {
           padding: 0.8rem;
 
-          .skills-content-skill-card-details-list {
+          .skill-card-list {
             @include mixins.flex-row(
               $justify-content: flex-start,
               $gap: $spacing-s,
               $flex-wrap: wrap
             );
 
-            .skills-content-skill-card-details-list-item {
+            .skill-card-item {
               @include mixins.typography(
                 $font-size: 1.6rem,
                 $font-weight: $normal,
@@ -253,11 +253,11 @@
     @include mixins.flex-row($align-items: center, $gap: $spacing-l);
     align-self: stretch;
 
-    .about-me-content-text-details {
+    .about-me-text-details {
       @include mixins.flex-column($gap: $spacing-m);
       flex: 1;
 
-      .about-me-content-text-details-description {
+      .about-me-description {
         align-self: stretch;
         @include mixins.typography(
           $font-size: 1.6rem,
@@ -267,8 +267,8 @@
       }
     }
 
-    .about-me-content-img-box {
-      .about-me-content-img-box-img {
+    .about-me-img-box {
+      .about-me-img {
         align-self: stretch;
         animation-name: animate;
         animation-timing-function: ease;
@@ -291,14 +291,14 @@
 
 // contacts section
 .contacts {
-  .contacts-details {
+  .contact-details {
     @include mixins.flex-row($gap: $spacing-l);
 
-    .contacts-details-text-container {
+    .contact-details-text-container {
       flex: 1;
       @include mixins.flex-column($align-items: stretch);
 
-      .contacts-details-text-container-description {
+      .contact-details-description {
         @include mixins.typography(
           $font-size: $paragraph,
           $font-weight: $medium,
@@ -307,7 +307,7 @@
       }
     }
 
-    .contacts-details-contacts-box {
+    .contact-box {
       @include mixins.flex-column(
         $align-items: center,
         $justify-content: center,
@@ -317,7 +317,7 @@
       padding: 2rem;
     }
 
-    .contacts-details-contacts-box-text {
+    .contact-text {
       @include mixins.typography(
         $font-size: $paragraph,
         $font-weight: $semi-bold,
@@ -325,20 +325,20 @@
       );
     }
 
-    .contacts-details-contacts-box-contacts-list {
+    .contact-list {
       @include mixins.flex-column(
         $align-items: stretch,
         $justify-content: center,
         $gap: $spacing-m
       );
 
-      .contacts-details-contacts-box-contacts-list-item {
+      .contact-item {
         @include mixins.flex-row(
           $justify-content: flex-start,
           $gap: $spacing-s
         );
 
-        .contacts-details-contacts-box-contacts-list-item-icon {
+        .contact-icon {
           @include mixins.dimensions($width: 3.2rem, $height: 3.2rem);
         }
       }
@@ -365,17 +365,17 @@
   .footer-top {
     @include mixins.flex-row($gap: $spacing-m);
 
-    .footer-top-sign-off {
+    .sign-off {
       @include mixins.flex-column($align-items: stretch, $gap: $spacing-s);
       flex: 1;
 
-      .footer-top-sign-off-name {
+      .sign-off-name {
         @include mixins.flex-row(
           $justify-content: flex-start,
           $gap: $spacing-xs
         );
 
-        .footer-top-sign-off-name-profile {
+        .sign-off-name-profile {
           @include mixins.typography(
             $font-size: $paragraph,
             $font-weight: $normal,
@@ -384,7 +384,7 @@
         }
       }
 
-      .footer-top-sign-off-designation {
+      .sign-off-designation {
         @include mixins.typography(
           $font-size: $paragraph,
           $font-weight: $normal,
@@ -393,10 +393,10 @@
       }
     }
 
-    .footer-top-media {
+    .media {
       @include mixins.flex-column($gap: $spacing-s);
 
-      .footer-top-media-heading {
+      .media-heading {
         @include mixins.typography(
           $font-size: $label,
           $font-weight: $medium,
@@ -404,10 +404,10 @@
         );
       }
 
-      .footer-top-media-icons-container {
+      .media-icons-container {
         @include mixins.flex-row($justify-content: center, $gap: $spacing-xs);
 
-        .footer-top-media-icons-container-icon {
+        .media-icon {
           @include mixins.dimensions($width: 3.2rem, $height: 3.2rem);
         }
       }
@@ -417,7 +417,7 @@
   .footer-bottom {
     @include mixins.flex-column($align-items: center);
 
-    .footer-bottom-copyright {
+    .copyright {
       @include mixins.typography(
         $font-size: $paragraph,
         $font-weight: $normal,
